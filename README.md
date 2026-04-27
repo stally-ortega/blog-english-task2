@@ -23,6 +23,14 @@
 | **Activity** | Task 2 — Colombia Travel Bucket List |
 | **Aesthetic Reference** | [Sunsets & Stage](https://cucuta-sunsets-and-stage.lovable.app/) |
 
+### 🔗 Live Demo
+
+[![Live Demo](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-orange?style=for-the-badge&logo=github)](https://stally-ortega.github.io/blog-english-task2/)
+
+> **👉 [https://stally-ortega.github.io/blog-english-task2/](https://stally-ortega.github.io/blog-english-task2/)**
+
+---
+
 ### English B1 Grammar Coverage
 
 | Section | Grammar Structure |
