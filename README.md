@@ -187,8 +187,6 @@ Blog/
 │   │   │   ├── cucuta-places.jpg
 │   │   │   ├── cucuta-activities.jpg
 │   │   │   └── cucuta-tips.jpg
-│   │   └── data/
-│   │       └── data.json          <- source of truth (gitignored)
 │   ├── index.html
 │   ├── main.ts
 │   └── styles.scss
