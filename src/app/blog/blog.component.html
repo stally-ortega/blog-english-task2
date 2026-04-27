@@ -1,0 +1,123 @@
+<!-- blog.component.html — Editorial Zig-Zag + Section Bands v3 -->
+
+<!-- ═══ HEADER ═══════════════════════════════════════════════════ -->
+<header class="blog-header" role="banner">
+  <div class="blog-header__inner">
+    <div class="blog-header__brand">
+      <i class="fa-solid fa-sun blog-header__sun-icon" aria-hidden="true"></i>
+      <span class="blog-header__site-name">Sunsets &amp; Stage</span>
+    </div>
+    <div class="blog-header__meta">
+      <span class="blog-header__pill"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Cúcuta,
+        Colombia</span>
+      <span class="blog-header__pill"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> SENA &amp;
+        UNAD</span>
+      <span class="blog-header__pill"><i class="fa-solid fa-language" aria-hidden="true"></i> English B1</span>
+    </div>
+    <p class="blog-header__tagline">A journey through Cúcuta — acting, culture &amp; unforgettable sunsets</p>
+    <div class="blog-header__scroll-cue" aria-hidden="true">
+      <i class="fa-solid fa-angles-down"></i>
+    </div>
+  </div>
+
+  <!-- Wave divider from header into section 1 -->
+  <div class="wave-divider wave-divider--header" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#1e0a3c" />
+    </svg>
+  </div>
+</header>
+
+<!-- ═══ MAIN ══════════════════════════════════════════════════════ -->
+<main role="main" id="main-content">
+
+  <!-- ── SECTION BAND LOOP ──────────────────────────────────────── -->
+  <ng-container *ngFor="let section of sections; trackBy: trackById; let i = index">
+
+    <!-- Full-bleed colour band per section -->
+    <div class="section-band" [attr.data-band]="i" [id]="section.id">
+      <div class="blog-container">
+        <section class="editorial-section" [class.editorial-section--reverse]="i % 2 !== 0"
+          [attr.aria-labelledby]="section.id + '-title'">
+
+          <!-- IMAGE COLUMN -->
+          <div class="editorial-section__image-col">
+            <figure class="editorial-img">
+              <span class="editorial-img__number" aria-hidden="true">{{ formatIndex(i) }}</span>
+              <div class="editorial-img__grammar" [attr.aria-label]="'Grammar: ' + section.grammarFocus">
+                <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
+                <span>{{ section.grammarFocus }}</span>
+              </div>
+              <img class="editorial-img__photo" [src]="section.imageUrl" [alt]="'Photo for: ' + section.title"
+                loading="lazy" />
+              <div class="editorial-img__overlay" aria-hidden="true"></div>
+            </figure>
+          </div>
+
+          <!-- TEXT COLUMN -->
+          <div class="editorial-section__text-col">
+            <div class="editorial-card">
+
+              <div class="editorial-card__title-row">
+                <div class="editorial-card__icon" aria-hidden="true">
+                  <i [class]="getSectionIcon(section.id)"></i>
+                </div>
+                <div>
+                  <h2 class="editorial-card__title" [id]="section.id + '-title'">{{ section.title }}</h2>
+                  <p class="editorial-card__subtitle">{{ section.subtitle }}</p>
+                </div>
+              </div>
+
+              <ul class="editorial-card__keywords" aria-label="Keywords" role="list">
+                <li *ngFor="let kw of parseKeywords(section.keywords)" class="editorial-card__keyword" role="listitem">
+                  {{ kw }}</li>
+              </ul>
+
+              <p class="editorial-card__lead">{{ section.description }}</p>
+
+              <div class="editorial-card__divider" aria-hidden="true"></div>
+
+              <p class="editorial-card__story">{{ section.storyText }}</p>
+
+              <a class="editorial-card__cta" [href]="'#' + section.id" [attr.aria-label]="'Explore ' + section.title">
+                Explore More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+
+            </div>
+          </div>
+
+        </section>
+      </div>
+
+      <!-- SVG Wave at bottom of each band (points into next band's colour) -->
+      <div class="wave-divider" [attr.data-wave]="i" aria-hidden="true">
+        <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path *ngIf="i === 0" d="M0,45 C360,90 720,0 1080,45 C1260,67 1380,30 1440,45 L1440,90 L0,90 Z"
+            fill="#2a0e4f" />
+          <path *ngIf="i === 1"
+            d="M0,30 C180,60 360,0 540,30 C720,60 900,0 1080,30 C1260,60 1380,20 1440,30 L1440,90 L0,90 Z"
+            fill="#120226" />
+          <path *ngIf="i === 2" d="M0,50 C240,90 480,10 720,50 C960,90 1200,10 1440,50 L1440,90 L0,90 Z"
+            fill="#1a0038" />
+          <path *ngIf="i === 3" d="M0,40 C300,80 600,0 900,40 C1050,60 1200,20 1440,40 L1440,90 L0,90 Z"
+            fill="#0d001a" />
+        </svg>
+      </div>
+    </div>
+    <!-- /section-band -->
+
+  </ng-container>
+
+</main>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════════ -->
+<footer class="blog-footer" role="contentinfo">
+  <div class="blog-container blog-footer__inner">
+    <div class="blog-footer__brand">
+      <i class="fa-solid fa-sun" aria-hidden="true"></i>
+      <span>Sunsets &amp; Stage</span>
+    </div>
+    <p class="blog-footer__copy">&copy; 2026 &mdash; <strong>English B1 Academic Task</strong> &bull; UNAD &bull; SENA
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,35 @@
+{
+  "name": "sunsets-and-stage",
+  "version": "1.0.0",
+  "description": "Editorial travel blog — Cúcuta, Colombia. UNAD · Ingeniería de Sistemas · English B1 (900003) · Task 2.",
+  "keywords": ["angular", "travel-blog", "cucuta", "english-b1", "unad", "sena", "scss", "bem"],
+  "author": "UNAD — Ingeniería de Sistemas",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build:ghpages": "ng build --base-href /sunsets-and-stage/",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "packageManager": "npm@10.6.0",
+  "dependencies": {
+    "@angular/common": "^21.2.0",
+    "@angular/compiler": "^21.2.0",
+    "@angular/core": "^21.2.0",
+    "@angular/forms": "^21.2.0",
+    "@angular/platform-browser": "^21.2.0",
+    "@angular/router": "^21.2.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^21.2.8",
+    "@angular/cli": "^21.2.8",
+    "@angular/compiler-cli": "^21.2.0",
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.2"
+  }
+}

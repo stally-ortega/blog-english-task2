@@ -1,0 +1,12 @@
+/* Global reset — component styles handle all design tokens */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(160deg, #1a0533 0%, #2d1b69 40%, #4a1060 70%, #1c0a1e 100%);
+  background-attachment: fixed;
+  color: rgba(255, 255, 255, 0.85);
+  min-height: 100dvh;
+}

@@ -1,0 +1,11 @@
+/**
+ * app.scss — Root shell styles for "Sunsets & Stage"
+ * =====================================================
+ * Kept intentionally empty. The global background, font, and colour
+ * tokens are defined in src/styles.scss (applied to <body>).
+ * Component-level styles live in blog.component.scss.
+ */
+
+:host {
+  display: block;
+}
