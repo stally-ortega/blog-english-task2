@@ -2,7 +2,16 @@
   "name": "sunsets-and-stage",
   "version": "1.0.0",
   "description": "Editorial travel blog — Cúcuta, Colombia. UNAD · Ingeniería de Sistemas · English B1 (900003) · Task 2.",
-  "keywords": ["angular", "travel-blog", "cucuta", "english-b1", "unad", "sena", "scss", "bem"],
+  "keywords": [
+    "angular",
+    "travel-blog",
+    "cucuta",
+    "english-b1",
+    "unad",
+    "sena",
+    "scss",
+    "bem"
+  ],
   "author": "UNAD — Ingeniería de Sistemas",
   "license": "MIT",
   "scripts": {
@@ -29,6 +38,7 @@
     "@angular/build": "^21.2.8",
     "@angular/cli": "^21.2.8",
     "@angular/compiler-cli": "^21.2.0",
+    "angular-cli-ghpages": "^3.0.3",
     "prettier": "^3.8.1",
     "typescript": "~5.9.2"
   }
